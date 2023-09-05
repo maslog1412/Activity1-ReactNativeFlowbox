@@ -18,19 +18,49 @@ export default function App() {
       </View>
       <Text style={styles.subjectsText}>My Subjects</Text>
       <View style={styles.sub1}>
-        <Text style={styles.subText}>ELEC 2</Text>
+        <View style={styles.subTextContainer}>
+          <Text style={styles.subText}>ELEC 2</Text>
+          <View style={[styles.subInfoContainer, { paddingTop: 15 }]}>
+            <Text style={styles.subInfo}>Web Development/Web Enterprise</Text>
+            <Text style={styles.unitsText}>Units: 3</Text>
+          </View>
+        </View>
       </View>
       <View style={styles.sub2}>
-        <Text style={styles.subText}>ELEC 3</Text>
+        <View style={styles.subTextContainer}>
+          <Text style={styles.subText}>ELEC 3</Text>
+          <View style={[styles.subInfoContainer, { paddingTop: 15 }]}>
+            <Text style={styles.subInfo}>Mobile Application</Text>
+            <Text style={styles.unitsText}>Units: 3</Text>
+          </View>
+        </View>
       </View>
       <View style={styles.sub3}>
-        <Text style={styles.subText}>IT 311</Text>
+        <View style={styles.subTextContainer}>
+          <Text style={styles.subText}>IT 311</Text>
+          <View style={[styles.subInfoContainer, { paddingTop: 15 }]}>
+            <Text style={styles.subInfo}>Software Engineering</Text>
+            <Text style={styles.unitsText}>Units: 3</Text>
+          </View>
+        </View>
       </View>
       <View style={styles.sub4}>
-        <Text style={styles.subText}>IT 312</Text>
+        <View style={styles.subTextContainer}>
+          <Text style={styles.subText}>IT 312</Text>
+          <View style={[styles.subInfoContainer, { paddingTop: 15 }]}>
+            <Text style={styles.subInfo}>Information Assurance and Security 2</Text>
+            <Text style={styles.unitsText}>Units: 3</Text>
+          </View>
+        </View>
       </View>
       <View style={styles.sub5}>
-        <Text style={styles.subText}>IT 313</Text>
+        <View style={styles.subTextContainer}>
+          <Text style={styles.subText}>IT 313</Text>
+          <View style={[styles.subInfoContainer, { paddingTop: 15 }]}>
+            <Text style={styles.subInfo}>Quantitative Methods</Text>
+            <Text style={styles.unitsText}>Units: 3</Text>
+          </View>
+        </View>
       </View>
     </View>
   );
@@ -127,11 +157,27 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
     borderRadius: 10,
   },
+  subTextContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
   subText: {
     color: 'black',
     fontSize: 20,
     fontWeight: 'bold',
     marginLeft: 10,
     paddingTop: 18,
+  },
+  subInfoContainer: {
+    flexDirection: 'column',
+    marginLeft: 10,
+  },
+  subInfo: {
+    color: 'black',
+    fontSize: 15,
+  },
+  unitsText: {
+    color: 'black',
+    fontSize: 15,
   },
 });
